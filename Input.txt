@@ -1,0 +1,90 @@
+################ ---CPP CLASS FILES  GENERATOR---- ######################################
+# The objective of this tool is to avoid having to manually create files (.h .cpp ) and
+# write all the default get-setter function for available variable.
+# The tool also helps with including default header files. Author info. Function description block etc.
+# Authored by Anish Kumar M. Bangalore
+#####################################################################################
+
+
+# Input for CPPClass Generator.  Anish Kumar M-+919035689682.
+
+# Author Name  and Date details.
+# if NO date is given then system date is provided.
+
+AUTHOR:  Anish Kumar M.
+DATE:  
+*********************************************************************************************************************************************
+# include files needed in header and cpp files.[these header files will be added to all the files h&cpp files created]
+HFILE_INCLUDE_START
+#include "MavSerializable.h"
+#include "jsonCommonDefs.h"
+#include "inc/mxLog.h"
+#include "MavString.h"
+#include "PresenceCommonDef.h"
+#include <eList.h>
+#include "LinkData.h"
+HFILE_INCLUDE_END
+
+**********************************************************************************************************************
+
+CPPFILE_INCLUDE_START
+#include "MavSerializable.h"
+#include "jsonCommonDefs.h"
+#include "inc/mxLog.h"
+#include "MavString.h"
+#include "PresenceCommonDef.h"
+#include <eList.h>
+#include "LinkData.h"
+
+CPPFILE_INCLUDE_END
+*********************************************************************************************************************************************
+
+# this block will be put as it is before function def block in cpp file.
+FUNCTION_HEAD_START
+/********************************************************************** 
+// Name::
+// Description::
+//
+*********************************************************************/
+
+FUNCTION_HEAD_END
+
+*********************************************************************************************************************************************
+# get-set functions will be created based on the member variable names.
+# so if any prefereable prefix  ex: get_vname etc.
+# if no entries are made for below entries then normal getVname and setVname are used.
+
+GET_FUNCTION_PREFIX:get_
+SET_FUNCTION_PREFIX:set_
+
+# in cases where variable names are of type mVarName and get-set Functions needs to be of getVarName .
+# the configured number of characters are trimmed from beginning of the variable name.
+
+VARIABLE_TRIM_LENGTH:1
+*********************************************************************************************************************************************
+
+# class names, function names and variable names are read here.
+# any number of classes, its corresponding functions and variables can be put..
+#
+
+CLASS_NAME:AbChangesNotificationData
+FUNC: void writeObject(int n, char * data)
+FUNC: void readObject(char * s,int len)
+u32_t                    mDuration
+MavString                mCallbackData   
+PresenceResourceStatus_e mResourceStatus
+LinkData                 mLinkData
+LinkDataList             mLinkDataList
+CLASS_END
+
+
+CLASS_NAME:AbChangesNotificationData2
+FUNC: void writeObject(int n, char * data)
+FUNC: void readObject(char * s,int len)
+u32_t                    mDuration
+MavString                mCallbackData   
+PresenceResourceStatus_e mResourceStatus
+LinkData                 mLinkData
+LinkDataList             mLinkDataList
+CLASS_END
+
