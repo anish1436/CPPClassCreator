@@ -32,3 +32,6 @@ CLASS_END
 
 for each of the classes header and cpp files with setters/getters, header files provided as input and other description blocks are added to all 
 of the class files that are created
+
+fill in the Input.txt file in the same folder as the python scripts and invoke the CreateCPPClass.py script... the class files are created
+in the same folder
